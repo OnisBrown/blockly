@@ -29,14 +29,16 @@ async function waitTimeCode(pause)
 Blockly.JavaScript['askOQuestion'] = function(block) {
   //GoTo a location
   var prompt = block.getFieldValue('prompt');
-  var code = `await askOCode("${prompt}");\n`;
+  var simBool = block.getFieldValue('simulator').toLowerCase();
+  var code = `await askOCode("${prompt}", ${simBool});\n`;
   return code;
 };
 
-async function askOCode(prompt)
+async function askOCode(prompt, simBool)
 {
-	let result = await Picker(["askO", prompt]);
-  console.log(result);
+  console.log(prompt)
+	let result = await Picker(["askO", (prompt), (simBool)]);
+  console.log(JSON.stringify(result));
 }
 
 Blockly.JavaScript['start'] = function(block){

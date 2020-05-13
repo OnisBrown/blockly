@@ -56,7 +56,7 @@ goToDescribeWhileJSON = {
       "previousStatement": null,
       "style":"procedure_blocks",
       "tooltip": "Insert an exhibitLs Block to get the premade talk on that exhibit",
-    };
+};
 
 Blockly.Blocks['goToDescribeWhile'] = {
   init: function() {

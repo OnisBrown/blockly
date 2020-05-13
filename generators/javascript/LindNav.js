@@ -1,4 +1,3 @@
-
 Blockly.JavaScript['goTo'] = function(block) {
   //GoTo a location
   var choice = Blockly.JavaScript.valueToCode(block,'exhibit', Blockly.JavaScript.ORDER_ATOMIC) || "failing to get location number";

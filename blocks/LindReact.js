@@ -59,6 +59,14 @@ var askOQuestionJSON ={
       "check":"String"
     }
   ],
+  "message1": '(No working microphone? %1)',
+  "args1": [
+    {
+      "type": "field_checkbox",
+      "name":"simulator",
+      "checked": true
+    },
+  ],
   "nextStatement": null,
   "previousStatement": null,
   "style":"procedure_blocks",
