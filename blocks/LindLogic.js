@@ -1,5 +1,5 @@
 var listCondXJSON ={
-  "message0": '%1 %2 %3',
+  "message0": '%1 is %2  %3 %4',
   "args0": [
     {
       "type": "input_value",
@@ -19,6 +19,9 @@ var listCondXJSON ={
     {
       "type": "input_value",
       "name": "limit",
+    },
+    {
+      "type": "dummy_input"
     }
   ],
   "output": "String",
