@@ -26,24 +26,13 @@ Blockly.Blocks['lindFor'] = {
 };
 
 var whileXJSON ={
-  "message0": 'while %1 is %2 %3 do',
+  "message0": 'while %1',
   "args0": [
     {
       "type": "input_value",
       "name": "target",
       "min": 1,
       "max": 10
-    },
-    {
-      "type": "field_dropdown",
-      "name": "comparitor",
-      "options": [
-        [ "<", "<" ],
-        [ ">", ">" ],
-        [ "=", "==" ],
-        [ "< or =", "<=" ],
-        [ "> or =", ">=" ]
-      ]
     },
     {
       "type": "field_number",

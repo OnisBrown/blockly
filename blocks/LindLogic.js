@@ -7,22 +7,17 @@ var listCondXJSON ={
       "name": "check",
     }
   ],
-  "message1": '%1 %2 %3',
+  "message1": '%1 %2',
   "args1": [
-    {
-      "type": "field_dropdown",
-      "name": "target",
-      "options": [
-        [ "person", "person" ],
-        [ "exhibits", "exhibits" ],
-      ]
-    },
     {
       "type": "field_dropdown",
       "name": "comparitor",
       "options": [
         [ "<", "<" ],
-        [ ">", ">" ]
+        [ ">", ">" ],
+        ["\x22DC","<="],
+        ["\x22DD",">="],
+        ["\x2260","=="],
       ]
     },
     {
