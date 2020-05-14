@@ -31,13 +31,7 @@ var whileXJSON ={
     {
       "type": "input_value",
       "name": "target",
-      "min": 1,
-      "max": 10
     },
-    {
-      "type": "field_number",
-      "name": "condition",
-    }
   ],
   "message1": "%{BKY_CONTROLS_REPEAT_INPUT_DO} %1",
   "args1": [{
