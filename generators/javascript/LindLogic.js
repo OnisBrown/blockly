@@ -4,7 +4,7 @@ Blockly.JavaScript['listCond'] = function(block) {
   var comp = block.getFieldValue('comparitor');
   var lim = block.getFieldValue('limit');
   var code = `${check} ${comp} ${lim}`;
-  [code, Blockly.JavaScript.ORDER_ATOMIC];
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['lindIf'] = function(block){

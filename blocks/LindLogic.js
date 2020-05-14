@@ -1,14 +1,11 @@
 var listCondXJSON ={
   "type": "logic_operation",
-  "message0": '%1',
+  "message0": '%1 %2 %3',
   "args0": [
     {
       "type": "input_value",
       "name": "check",
-    }
-  ],
-  "message1": '%1 %2',
-  "args1": [
+    },
     {
       "type": "field_dropdown",
       "name": "comparitor",
