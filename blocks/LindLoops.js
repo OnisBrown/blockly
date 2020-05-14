@@ -38,6 +38,7 @@ var whileXJSON ={
     "type": "input_statement",
     "name": "DO"
   }],
+  "inputsInline": true,
   "nextStatement": null,
   "previousStatement": null,
   "colour": "#00008b",

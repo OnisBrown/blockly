@@ -1,5 +1,5 @@
 var listCondXJSON ={
-  "message0": '%1 is %2  %3 %4',
+  "message0": 'condition: %1 is %2 to/than %3',
   "args0": [
     {
       "type": "input_value",
@@ -19,11 +19,9 @@ var listCondXJSON ={
     {
       "type": "input_value",
       "name": "limit",
-    },
-    {
-      "type": "dummy_input"
     }
   ],
+  "inputsInline": true,
   "output": "String",
   "style":"procedure_blocks",
   "tooltip": "choose your conditions"

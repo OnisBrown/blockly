@@ -52,6 +52,7 @@ goToDescribeWhileJSON = {
       "args1": [
         {"type": "input_statement", "name": "DO"}
       ],
+      "inputsInline": true,
       "nextStatement": null,
       "previousStatement": null,
       "style":"procedure_blocks",
