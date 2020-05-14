@@ -21,7 +21,7 @@ giveSpeechJSON = {
   "message0": 'say %1',
   "args0": [
     {
-      "type": "field_input",
+      "type": "field_multilinetext",
       "name": "script",
       "check": "String",
       "TEXT_DEFAULT_HEIGHT": '20px'
