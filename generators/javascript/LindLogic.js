@@ -8,7 +8,7 @@ Blockly.JavaScript['listCond'] = function(block) {
   [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
-Blockly.javascript['lindIf'] = function(block){
+Blockly.JavaScript['lindIf'] = function(block){
   // If/elseif/else condition.
   var n = 0;
   var code = '', branchCode, conditionCode;
