@@ -1,13 +1,9 @@
 var listCondXJSON ={
-  "message0": 'check for %1',
+  "message0": '%1',
   "args0": [
     {
-      "type": "field_dropdown",
+      "type": "input_value",
       "name": "check",
-      "options": [
-        [ "metres of object from Lindsey", "metres" ],
-        [ "number of objects", "number" ]
-      ]
     }
   ],
   "message1": '%1 %2 %3',
@@ -24,8 +20,8 @@ var listCondXJSON ={
       "type": "field_dropdown",
       "name": "comparitor",
       "options": [
-        [ "less than", "<" ],
-        [ "greater than", ">" ]
+        [ "<", "<" ],
+        [ ">", ">" ]
       ]
     },
     {
@@ -39,7 +35,6 @@ var listCondXJSON ={
 };
 
 var lindIfJSON ={
-    "type": "controls_if",
     "message0": "%{BKY_CONTROLS_IF_MSG_IF} %1",
     "args0": [
       {
