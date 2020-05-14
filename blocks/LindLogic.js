@@ -1,5 +1,4 @@
 var listCondXJSON ={
-  "type": "logic_operation",
   "message0": '%1 %2 %3',
   "args0": [
     {
@@ -49,6 +48,12 @@ var lindIfJSON ={
     "mutator": "controls_if_mutator",
     "extensions": ["controls_if_tooltip"]
 }
+
+Blockly.Blocks['lindIf'] = {
+  init: function() {
+    this.jsonInit(lindIfJSON);
+  }
+};
 
 Blockly.Blocks['listCond'] = {
   init: function() {
