@@ -15,13 +15,13 @@ var listCondXJSON ={
       "options": [
         [ "<", "<" ],
         [ ">", ">" ],
-        ["\x22DC","<="],
-        ["\x22DD",">="],
-        ["\x2260","=="],
+        ["≤","<="],
+        ["≥",">="],
+        ["≠","=="],
       ]
     },
     {
-      "type": "field_number",
+      "type": "input_value",
       "name": "limit",
     }
   ],
