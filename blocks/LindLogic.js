@@ -1,4 +1,5 @@
 var listCondXJSON ={
+  "type": "logic_operation",
   "message0": '%1',
   "args0": [
     {
