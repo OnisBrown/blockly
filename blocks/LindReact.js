@@ -50,35 +50,6 @@ Blockly.Blocks['pause'] = {
   }
 };
 
-var askOQuestionJSON ={
-  "message0": 'Prompt for dialogue: %1',
-  "args0": [
-    {
-      "type": "field_input",
-      "name": "prompt",
-      "check":"String"
-    }
-  ],
-  "message1": '(No working microphone? %1)',
-  "args1": [
-    {
-      "type": "field_checkbox",
-      "name":"simulator",
-      "checked": true
-    },
-  ],
-  "nextStatement": null,
-  "previousStatement": null,
-  "style":"procedure_blocks",
-  "tooltip": "waits for a person to get within distance before "
-};
-
-Blockly.Blocks['askOQuestion'] = {
-  init: function() {
-    this.jsonInit(askOQuestionJSON);
-  }
-};
-
 var startJSON ={
   "message0": 'Attach Blocks here',
   "nextStatement": null,

@@ -106,3 +106,32 @@ Blockly.Blocks['askYNQuestion'] = {
     this.jsonInit(askYNQuestionJSON);
   }
 };
+
+var askOQuestionJSON ={
+  "message0": 'Say: %1. and wait for a response',
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "prompt",
+      "check":"String"
+    }
+  ],
+  "message1": '(No working microphone? %1)',
+  "args1": [
+    {
+      "type": "field_checkbox",
+      "name":"simulator",
+      "checked": true
+    },
+  ],
+  "nextStatement": null,
+  "previousStatement": null,
+  "style":"procedure_blocks",
+  "tooltip": "allows you to ask the robot to do something via spoken word or text input"
+};
+
+Blockly.Blocks['askOQuestion'] = {
+  init: function() {
+    this.jsonInit(askOQuestionJSON);
+  }
+};
