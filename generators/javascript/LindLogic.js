@@ -37,7 +37,7 @@ Blockly.JavaScript['lindIf'] = function(block){
           Blockly.JavaScript.injectId(Blockly.JavaScript.STATEMENT_SUFFIX,
           block), Blockly.JavaScript.INDENT) + branchCode;
     }
-    code += ' else {\n' + branchCode + '}\n';
+    code += '\n else {\n' + branchCode + '}\n';
   }
     return code + '\n';
 };

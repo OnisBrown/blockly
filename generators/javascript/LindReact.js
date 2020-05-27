@@ -30,10 +30,10 @@ Blockly.JavaScript['NearestPerDist'] = function(block){
   var simBool = block.getFieldValue('simulator').toLowerCase();
   console.log(simBool)
   if(simBool=="true"){
-    var code = 'simPos(0, sub=false)';
+    var code = 'await simPos(0, sub=false)';
   }
   else{
-    var code = 'personSense(0, sub=false)';
+    var code = 'await personSense(0, sub=false)';
   }
   return [code, Blockly.JavaScript.ORDER_ATOMIC]
 }
