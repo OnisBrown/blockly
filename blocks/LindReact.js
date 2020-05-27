@@ -60,7 +60,7 @@ var nearestPersDistJSON={
       "checked": true
     },
   ],
-  "output": "String",
+  "output": "number",
   "style":"procedure_blocks",
   "tooltip": "returns the distance to the nearest person"
 }
