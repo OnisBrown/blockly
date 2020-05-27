@@ -28,6 +28,7 @@ async function waitTimeCode(pause)
 
 Blockly.JavaScript['NearestPerDist'] = function(block){
   var simBool = block.getFieldValue('simulator').toLowerCase();
+  console.log("simbool")
   if(simBool){
     var code = 'simPos(0, sub=false)';
   }
