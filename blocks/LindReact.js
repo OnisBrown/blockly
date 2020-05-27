@@ -33,9 +33,9 @@ var waitTimeJSON ={
   "args0": [
     {
       "type": "field_number",
-      "name": "distance",
-      "min": 1,
-      "max": 5
+      "name": "time",
+      "min": 0,
+      "max": 300
     }
   ],
   "nextStatement": null,
