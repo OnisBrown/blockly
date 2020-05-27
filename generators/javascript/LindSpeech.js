@@ -28,6 +28,21 @@ async function descCode(choice, behaviours1, behaviours2){
   console.log(result);
 }
 
+Blockly.JavaScript['askOQuestion'] = function(block) {
+  //GoTo a location
+  var prompt = block.getFieldValue('prompt');
+  var simBool = block.getFieldValue('simulator').toLowerCase();
+  var code = `await askOCode("${prompt}", ${simBool});\n`;
+  return code;
+};
+
+async function askOCode(prompt, simBool)
+{
+  console.log(prompt)
+	let result = await Picker(["askO", (prompt), (simBool)]);
+  console.log(JSON.stringify(result));
+}
+
 Blockly.JavaScript['askYNQuestion'] = function(block) {
   var question = block.getFieldValue('question') || "failed to parse speech";
   var code = `await askYNQuestionCode("${question}");\n`;
