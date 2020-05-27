@@ -26,6 +26,17 @@ async function waitTimeCode(pause)
   console.log(result);
 }
 
+Blockly.JavaScript['NearestPerDist'] = function(block){
+  var simBool = block.getFieldValue('simulator').toLowerCase();
+  if(simBool){
+    var code = 'simPos(0, sub=false)';
+  }
+  else{
+    var code = 'personSense(0, sub=false)';
+  }
+  return [code, Blockly.JavaScript.ORDER_ATOMIC]
+}
+
 Blockly.JavaScript['start'] = function(block){
   var code = '';
   return code;

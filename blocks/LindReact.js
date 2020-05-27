@@ -50,6 +50,27 @@ Blockly.Blocks['pause'] = {
   }
 };
 
+var nearestPersdistJSON={
+  "message0":"The nearest person's distance in metres",
+  "message1": '(is this the simulator? %1)',
+  "args1": [
+    {
+      "type": "field_checkbox",
+      "name":"simulator",
+      "checked": true
+    },
+  ],
+  "output": "String",
+  "style":"procedure_blocks",
+  "tooltip": "returns the distance to the nearest person"
+}
+
+Blockly.Blocks['NearestPerDist'] = {
+  init: function(){
+    this.jsonInit(nearestPersDistJSON);
+  }
+}
+
 var startJSON ={
   "message0": 'Attach Blocks here',
   "nextStatement": null,
