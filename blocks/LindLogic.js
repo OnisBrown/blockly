@@ -28,6 +28,12 @@ var listCondXJSON ={
   "tooltip": "choose your conditions"
 };
 
+Blockly.Blocks['listCond'] = {
+  init: function() {
+    this.jsonInit(listCondXJSON);
+  }
+};
+
 var lindIfJSON ={
     "message0": "%{BKY_CONTROLS_IF_MSG_IF} %1",
     "args0": [
@@ -54,11 +60,5 @@ var lindIfJSON ={
 Blockly.Blocks['lindIf'] = {
   init: function() {
     this.jsonInit(lindIfJSON);
-  }
-};
-
-Blockly.Blocks['listCond'] = {
-  init: function() {
-    this.jsonInit(listCondXJSON);
   }
 };
