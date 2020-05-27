@@ -86,7 +86,7 @@ var nearestPersDistJSON={
   "tooltip": "returns the distance to the nearest person"
 }
 
-Blockly.Blocks['NearestExhDist'] = {
+Blockly.Blocks['NearestPerDist'] = {
   init: function(){
     this.jsonInit(nearestPersDistJSON);
   }
