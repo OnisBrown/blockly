@@ -50,7 +50,7 @@ Blockly.Blocks['pause'] = {
   }
 };
 
-var nearestPersdistJSON={
+var nearestPersDistJSON={
   "message0":"The nearest person's distance in metres",
   "message1": '(is this the simulator? %1)',
   "args1": [
