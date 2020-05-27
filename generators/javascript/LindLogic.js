@@ -3,7 +3,7 @@ Blockly.JavaScript['listCond'] = function(block) {
   var check = Blockly.JavaScript.valueToCode(block,'check', Blockly.JavaScript.ORDER_ATOMIC);
   var comp = block.getFieldValue('comparitor');
   var lim = Blockly.JavaScript.valueToCode(block,'limit', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = `${check} ${comp} ${lim}`;
+  var code = `(${check}) ${comp} (${lim})`;
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
