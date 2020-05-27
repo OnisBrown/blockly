@@ -1,8 +1,8 @@
 Blockly.JavaScript['listCond'] = function(block) {
   //GoTo a location
-  var check = block.getFieldValue('check');
+  var check = Blockly.JavaScript.valueToCode(block,'check', Blockly.JavaScript.ORDER_ATOMIC);
   var comp = block.getFieldValue('comparitor');
-  var lim = block.getFieldValue('limit');
+  var lim = Blockly.JavaScript.valueToCode(block,'limit', Blockly.JavaScript.ORDER_ATOMIC);
   var code = `${check} ${comp} ${lim}`;
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
