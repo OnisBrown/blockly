@@ -38,6 +38,18 @@ Blockly.JavaScript['NearestPerDist'] = function(block){
   return [code, Blockly.JavaScript.ORDER_ATOMIC]
 }
 
+Blockly.JavaScript['NearestPerDist'] = function(block){
+  var simBool = block.getFieldValue('simulator').toLowerCase();
+  console.log(simBool)
+  if(simBool=="true"){
+    var code = 'await simPos(0, sub=false)';
+  }
+  else{
+    var code = 'await personSense(0, sub=false)';
+  }
+  return [code, Blockly.JavaScript.ORDER_ATOMIC]
+}
+
 Blockly.JavaScript['start'] = function(block){
   var code = '';
   return code;

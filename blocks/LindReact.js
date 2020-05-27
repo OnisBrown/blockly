@@ -50,6 +50,27 @@ Blockly.Blocks['pause'] = {
   }
 };
 
+var nearestExhDistJSON={
+  "message0":"exhibit distance",
+  "message1": '(is this the simulator? %1)',
+  "args1": [
+    {
+      "type": "field_checkbox",
+      "name":"simulator",
+      "checked": true
+    },
+  ],
+  "output": "number",
+  "style":"procedure_blocks",
+  "tooltip": "returns the distance to the chosen exhibit"
+}
+
+Blockly.Blocks['NearestExhDist'] = {
+  init: function(){
+    this.jsonInit(nearestExhDistJSON);
+  }
+}
+
 var nearestPersDistJSON={
   "message0":"The nearest person's distance in metres",
   "message1": '(is this the simulator? %1)',
@@ -65,7 +86,7 @@ var nearestPersDistJSON={
   "tooltip": "returns the distance to the nearest person"
 }
 
-Blockly.Blocks['NearestPerDist'] = {
+Blockly.Blocks['NearestExhDist'] = {
   init: function(){
     this.jsonInit(nearestPersDistJSON);
   }

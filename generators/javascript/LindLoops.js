@@ -12,6 +12,6 @@ Blockly.JavaScript['lindWhile'] = function(block) {
   var target = Blockly.JavaScript.valueToCode(block,'target', Blockly.JavaScript.ORDER_ATOMIC)|| true;
   var forDo = Blockly.JavaScript.statementToCode(block, 'DO');
   innerCode = "\t" + forDo.replace("\n", "\n \t");
-  var code = `while(${target}){\n ${innerCode}}\n`;
+  var code = `while(${target}) {\n ${innerCode}}\n`;
   return code;
 };

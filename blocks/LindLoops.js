@@ -16,7 +16,7 @@ var forXJSON ={
   "nextStatement": null,
   "previousStatement": null,
   "colour": "#00008b",
-  "tooltip": "waits for an amount of seconds"
+  "tooltip": "For x iterations do:"
 };
 
 Blockly.Blocks['lindFor'] = {
@@ -42,7 +42,7 @@ var whileXJSON ={
   "nextStatement": null,
   "previousStatement": null,
   "colour": "#00008b",
-  "tooltip": "waits for an amount of seconds"
+  "tooltip": "while condition is true do:"
 };
 
 Blockly.Blocks['lindWhile'] = {
