@@ -20,6 +20,7 @@ var listCondXJSON ={
     {
       "type": "input_value",
       "name": "limit",
+      "check":["string","number"]
     }
   ],
   "inputsInline": true,
@@ -40,6 +41,7 @@ var lindIfJSON ={
       {
         "type": "input_value",
         "name": "IF0",
+        "check": "logic"
       }
     ],
     "message1": "%{BKY_CONTROLS_IF_MSG_THEN} %1",

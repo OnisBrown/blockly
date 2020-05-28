@@ -51,14 +51,21 @@ Blockly.Blocks['pause'] = {
 };
 
 var nearestExhDistJSON={
-  "message0":"exhibit distance",
+  "message0":"%1 exhibit distance",
+  "args1": [
+    {
+      "type":"input_value",
+      "name":"exhibit",
+      "check":"exhibit"
+    }
+  ]
   "message1": '(is this the simulator? %1)',
   "args1": [
     {
       "type": "field_checkbox",
       "name":"simulator",
       "checked": true
-    },
+    }
   ],
   "output": "number",
   "style":"procedure_blocks",

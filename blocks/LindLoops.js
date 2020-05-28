@@ -31,6 +31,7 @@ var whileXJSON ={
     {
       "type": "input_value",
       "name": "target",
+      "check":"logic"
     },
   ],
   "message1": "%{BKY_CONTROLS_REPEAT_INPUT_DO} %1",

@@ -7,7 +7,7 @@ scriptJSON = {
       "TEXT_DEFAULT_HEIGHT": '20px'
     }
   ],
-  "output": "String",
+  "output": "string",
   "colour": 160,
   "tooltip": "Pick a location from the drop down menu"
 };
@@ -24,7 +24,7 @@ giveSpeechJSON = {
     {
       "type": "input_value",
       "name":"script",
-      "check":"String"
+      "check":["String","number"]
     }
   ],
   "message1": 'behaviour toggles: gaze %1 pivoting %2',
@@ -58,7 +58,7 @@ describeJSON = {
     {
       "type": "input_value",
       "name": "exhibit",
-      "check": "String"
+      "check": "exhibit"
     },
   ],
   "message1": 'behaviour toggles: gaze %1 pivoting %2',
@@ -92,7 +92,7 @@ askYNQuestionJSON = {
     {
       "type": "field_input",
       "name": "question",
-      "check": "String"
+      "check": "string"
     }
   ],
   "nextStatement": null,
@@ -113,7 +113,7 @@ var askStrQuestionJSON ={
     {
       "type": "field_input",
       "name": "prompt",
-      "check":"String"
+      "check":"string"
     }
   ],
   "message1": '(No working microphone? %1)',
@@ -143,7 +143,7 @@ var askOQuestionJSON ={
     {
       "type": "field_input",
       "name": "prompt",
-      "check":"String"
+      "check":"string"
     }
   ],
   "message1": '(No working microphone? %1)',

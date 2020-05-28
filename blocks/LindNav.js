@@ -46,6 +46,7 @@ var goToCoordJSON ={
         {
           "type": "input_value",
           "name": "coord",
+          "check":"coord"
         }
       ],
       "nextStatement": null,
@@ -92,7 +93,7 @@ goToDescribeJSON = {
         {
           "type": "input_value",
           "name": "exhibit",
-          "check": "String"
+          "check": "exhibit"
         }
       ],
       "message1": 'behaviour toggles: gaze %1 pivoting %2',
@@ -171,7 +172,7 @@ coordJSON = {
       "max": 20
     }
   ],
-  "output": null,
+  "output": "coord",
   "nextStatement": null,
   "previousStatement": null,
   "style":"logic_blocks",
@@ -185,7 +186,7 @@ Blockly.Blocks['coord'] = {
 };
 
 exhibitLsJSON = {
-  "message0": 'exhibit: %1',
+  "message0": '%1',
   "args0": [
     {
       "type": "field_dropdown",
@@ -193,7 +194,7 @@ exhibitLsJSON = {
       "options": []
     }
   ],
-  "output": "String",
+  "output": "exhibit",
   "style":"procedure_blocks",
   "tooltip": "Pick an exhibit from the drop down menu"
 };
