@@ -58,7 +58,7 @@ var nearestExhDistJSON={
       "name":"exhibit",
       "check":"exhibit"
     }
-  ]
+  ],
   "message1": '(is this the simulator? %1)',
   "args1": [
     {

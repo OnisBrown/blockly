@@ -124,7 +124,7 @@ var askStrQuestionJSON ={
       "checked": true
     },
   ],
-  "output":"string"
+  "output":"string",
   "nextStatement": null,
   "previousStatement": null,
   "style":"procedure_blocks",
