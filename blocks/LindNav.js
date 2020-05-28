@@ -1,5 +1,5 @@
 var goToJSON ={
-      "message0": 'Go to %1',
+      "message0": 'Go to %1 exhibit',
       "args0": [
         {
           "type": "input_value",
@@ -7,10 +7,11 @@ var goToJSON ={
           "check": "String"
         }
       ],
+      "inputsInline": true,
       "nextStatement": null,
       "previousStatement": null,
       "style":"procedure_blocks",
-      "tooltip": "Insert a Location Block"
+      "tooltip": "Insert an exhibit Block"
 };
 
 Blockly.Blocks['goTo'] = {
@@ -36,6 +37,26 @@ var goToNodeJSON ={
 Blockly.Blocks['goToNode'] = {
   init: function() {
     this.jsonInit(goToNodeJSON);
+  }
+};
+
+var goToCoordJSON ={
+      "message0": 'Go to %1',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "coord",
+        }
+      ],
+      "nextStatement": null,
+      "previousStatement": null,
+      "style":"procedure_blocks",
+      "tooltip": "type a waypoint"
+};
+
+Blockly.Blocks['goToCoord'] = {
+  init: function() {
+    this.jsonInit(goToCoordJSON);
   }
 };
 

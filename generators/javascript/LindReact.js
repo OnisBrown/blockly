@@ -30,22 +30,34 @@ Blockly.JavaScript['NearestPerDist'] = function(block){
   var simBool = block.getFieldValue('simulator').toLowerCase();
   console.log(simBool)
   if(simBool=="true"){
-    var code = 'await simPos(0, sub=false)';
+    var code = 'await PerPos(0, false)';
   }
   else{
-    var code = 'await personSense(0, sub=false)';
+    var code = 'await personSense(0, false)';
   }
   return [code, Blockly.JavaScript.ORDER_ATOMIC]
 }
 
-Blockly.JavaScript['NearestPerDist'] = function(block){
+Blockly.JavaScript['NearestPerPos'] = function(block){
   var simBool = block.getFieldValue('simulator').toLowerCase();
   console.log(simBool)
   if(simBool=="true"){
-    var code = 'await simPos(0, sub=false)';
+    var code = 'await PerPos(0, false, true)';
   }
   else{
-    var code = 'await personSense(0, sub=false)';
+    var code = 'await PerPos(0, false, true, false)';
+  }
+  return [code, Blockly.JavaScript.ORDER_ATOMIC]
+}
+
+Blockly.JavaScript['NearestExhDist'] = function(block){
+  var simBool = block.getFieldValue('simulator').toLowerCase();
+  console.log(simBool)
+  if(simBool=="true"){
+    var code = 'await exhibitDist(0, false)';
+  }
+  else{
+    var code = 'await exhibitDist(0, false)';
   }
   return [code, Blockly.JavaScript.ORDER_ATOMIC]
 }

@@ -22,6 +22,18 @@ async function goToNodeCode(choice){
    console.log(result);
 }
 
+Blockly.JavaScript['goToCoord'] = function(block) {
+  //GoTo a location
+  var choice = Blockly.JavaScript.valueToCode(block,'coord', Blockly.JavaScript.ORDER_ATOMIC) || [0,0,0];
+  var code = "await goToCoordCode(" + choice + ");\n";
+  return code;
+};
+
+async function goToNodeCode(choice){
+   let result = await Picker(['goToCoord', choice]);
+   console.log(result);
+}
+
 Blockly.JavaScript['move'] = function(block) {
   //move in a direction
   var vector = new Array(0, 0, 0, 0);

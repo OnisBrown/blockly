@@ -92,6 +92,26 @@ Blockly.Blocks['NearestPerDist'] = {
   }
 }
 
+var nearestPersPosJSON={
+  "message0":"The nearest person's position in the map",
+  "message1": '(is this the simulator? %1)',
+  "args1": [
+    {
+      "type": "field_checkbox",
+      "name":"simulator",
+      "checked": true
+    },
+  ],
+  "style":"procedure_blocks",
+  "tooltip": "returns the distance to the nearest person"
+}
+
+Blockly.Blocks['NearestPerPos'] = {
+  init: function(){
+    this.jsonInit(nearestPersPosJSON);
+  }
+}
+
 var startJSON ={
   "message0": 'Attach Blocks here',
   "nextStatement": null,
