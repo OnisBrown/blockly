@@ -1,9 +1,10 @@
 scriptJSON = {
-  "message0": 'place speech here %1',
+  "message0": 'Write paragraph here: %1',
   "args0": [
     {
-      "type": "field_input",
+      "type": "field_multilinetext",
       "name": "script",
+      "TEXT_DEFAULT_HEIGHT": '20px'
     }
   ],
   "output": "String",
@@ -21,10 +22,9 @@ giveSpeechJSON = {
   "message0": 'say %1',
   "args0": [
     {
-      "type": "field_multilinetext",
-      "name": "script",
-      "check": "String",
-      "TEXT_DEFAULT_HEIGHT": '20px'
+      "type": "input_value",
+      "name":"script",
+      "check":"String"
     }
   ],
   "message1": 'behaviour toggles: gaze %1 pivoting %2',
@@ -107,8 +107,38 @@ Blockly.Blocks['askYNQuestion'] = {
   }
 };
 
+var askStrQuestionJSON ={
+  "message0": 'Say: %1. and return the response',
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "prompt",
+      "check":"String"
+    }
+  ],
+  "message1": '(No working microphone? %1)',
+  "args1": [
+    {
+      "type": "field_checkbox",
+      "name":"simulator",
+      "checked": true
+    },
+  ],
+  "output":"string"
+  "nextStatement": null,
+  "previousStatement": null,
+  "style":"procedure_blocks",
+  "tooltip": "allows you to ask the robot to do something via spoken word or text input"
+};
+
+Blockly.Blocks['askResQuestion'] = {
+  init: function() {
+    this.jsonInit(askResQuestionJSON);
+  }
+};
+
 var askOQuestionJSON ={
-  "message0": 'Say: %1. and wait for a response',
+  "message0": 'Say: %1 and wait for a command',
   "args0": [
     {
       "type": "field_input",

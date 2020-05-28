@@ -5,7 +5,7 @@ Blockly.JavaScript['script'] = function(block) {
 };
 
 Blockly.JavaScript['giveSpeech'] = function(block) {
-  var paragraph = block.getFieldValue('script');
+  var paragraph = Blockly.JavaScript.valueToCode(block,'script', Blockly.JavaScript.ORDER_ATOMIC) || "no text";
   var behaviours = [block.getFieldValue('gaze').toLowerCase(), block.getFieldValue('pivot').toLowerCase()];
   var code = `await giveSpeechCode(\`${paragraph}\`, ${behaviours[0]}, ${behaviours[1]});\n`;
   return code;

@@ -23,7 +23,7 @@ var listCondXJSON ={
     }
   ],
   "inputsInline": true,
-  "output": "String",
+  "output": "logic",
   "style":"procedure_blocks",
   "tooltip": "choose your conditions"
 };
