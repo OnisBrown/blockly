@@ -4,7 +4,7 @@ var goToJSON ={
         {
           "type": "input_value",
           "name": "exhibit",
-          "check": "String"
+          "check": "exhibit"
         }
       ],
       "inputsInline": true,
