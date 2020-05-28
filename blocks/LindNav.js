@@ -155,6 +155,35 @@ Blockly.Blocks['move'] = {
   }
 };
 
+coordJSON = {
+  "message0": 'x: %1 y: %2',
+  "args0": [
+    {
+      "type": "field_number",
+      "name": "x",
+      "min": -23,
+      "max": 7
+    },
+    {
+      "type": "field_number",
+      "name": "y",
+      "min": 2,
+      "max": 20
+    }
+  ],
+  "output": null,
+  "nextStatement": null,
+  "previousStatement": null,
+  "style":"logic_blocks",
+  "tooltip": "map coordinates for use with realted blocks"
+};
+
+Blockly.Blocks['coord'] = {
+  init: function() {
+    this.jsonInit(coordJSON);
+  }
+};
+
 exhibitLsJSON = {
   "message0": 'exhibit: %1',
   "args0": [

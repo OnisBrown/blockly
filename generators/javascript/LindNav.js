@@ -29,10 +29,18 @@ Blockly.JavaScript['goToCoord'] = function(block) {
   return code;
 };
 
-async function goToNodeCode(choice){
+async function goToCoordCode(choice){
    let result = await Picker(['goToCoord', choice]);
    console.log(result);
 }
+
+Blockly.JavaScript['coord'] = function(block) {
+  //Pick an exhibit
+  var x = block.getFieldValue('x');
+  var y = block.getFieldValue('y');
+  var code = `[${x},${y}]`;
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
 
 Blockly.JavaScript['move'] = function(block) {
   //move in a direction
