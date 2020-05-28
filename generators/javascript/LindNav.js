@@ -38,7 +38,7 @@ Blockly.JavaScript['coord'] = function(block) {
   //Pick an exhibit
   var x = block.getFieldValue('x');
   var y = block.getFieldValue('y');
-  var code = `[${x},${y}]`;
+  var code = `[${x}, ${y}, 0]`;
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
