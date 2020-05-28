@@ -173,8 +173,6 @@ coordJSON = {
     }
   ],
   "output": "coord",
-  "nextStatement": null,
-  "previousStatement": null,
   "style":"logic_blocks",
   "tooltip": "map coordinates for use with realted blocks"
 };
