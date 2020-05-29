@@ -149,7 +149,6 @@ var askResQuestionJSON ={
       "checked": true
     },
   ],
-  "output":"string",
   "nextStatement": null,
   "previousStatement": null,
   "style":"procedure_blocks",
