@@ -72,7 +72,7 @@ async function askResCode(prompt, simBool)
            });
          }
     });
-  }
+  });
 }
 
 Blockly.JavaScript['askYNQuestion'] = function(block) {
