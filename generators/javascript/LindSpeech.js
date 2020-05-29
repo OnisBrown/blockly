@@ -59,12 +59,12 @@ Blockly.JavaScript['askResQuestion'] = function(block) {
   return code;
 };
 
-async function askResCode(prompt, simBool)
+async function askResCode(scriptP, simBool)
 {
   return new Promise( resolve => {
-    rwcActionSay(prompt).on("result", (status)=>{
+    rwcActionSay(scriptP).on("result", (status)=>{
          if(simBool){
-           resolve(prompt(prompt));
+           resolve(prompt(scriptP));
          }
          else{
            rwcListenerGetDialogue().then(function(script){
