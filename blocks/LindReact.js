@@ -52,7 +52,7 @@ Blockly.Blocks['pause'] = {
 
 var nearestExhDistJSON={
   "message0":"%1 exhibit distance",
-  "args1": [
+  "args0": [
     {
       "type":"input_value",
       "name":"exhibit",

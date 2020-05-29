@@ -18,13 +18,33 @@ Blockly.Blocks['script'] = {
   }
 };
 
+scriptShortJSON = {
+  "message0": 'Write paragraph here: %1',
+  "args0": [
+    {
+      "type": "field_text",
+      "name": "script",
+      "TEXT_DEFAULT_HEIGHT": '20px'
+    }
+  ],
+  "output": "string",
+  "colour": 160,
+  "tooltip": "Pick a location from the drop down menu"
+};
+
+Blockly.Blocks['scriptShort'] = {
+  init: function() {
+    this.jsonInit(scriptShortJSON);
+  }
+};
+
 giveSpeechJSON = {
   "message0": 'say %1',
   "args0": [
     {
       "type": "input_value",
       "name":"script",
-      "check":["String","number"]
+      "check":["string","number"]
     }
   ],
   "message1": 'behaviour toggles: gaze %1 pivoting %2',

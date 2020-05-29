@@ -51,10 +51,11 @@ Blockly.JavaScript['NearestPerPos'] = function(block){
 }
 
 Blockly.JavaScript['NearestExhDist'] = function(block){
+  var choice = Blockly.JavaScript.valueToCode(block,'exhibit', Blockly.JavaScript.ORDER_ATOMIC) || "failing to get location number";
   var simBool = block.getFieldValue('simulator').toLowerCase();
   console.log(simBool)
   if(simBool=="true"){
-    var code = 'await exhibitDist(0, false)';
+    var code = 'await exhibitDist(, false)';
   }
   else{
     var code = 'await exhibitDist(0, false)';

@@ -4,6 +4,12 @@ Blockly.JavaScript['script'] = function(block) {
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
+Blockly.JavaScript['scriptShort'] = function(block) {
+  var paragraph = block.getFieldValue('script');
+  var code = paragraph;
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
 Blockly.JavaScript['giveSpeech'] = function(block) {
   var paragraph = Blockly.JavaScript.valueToCode(block,'script', Blockly.JavaScript.ORDER_ATOMIC) || "no text";
   var behaviours = [block.getFieldValue('gaze').toLowerCase(), block.getFieldValue('pivot').toLowerCase()];
