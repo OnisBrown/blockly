@@ -128,7 +128,7 @@ Blockly.Blocks['askYNQuestion'] = {
 };
 
 var askResQuestionJSON ={
-  "message0": 'Say: %1. and return the response',
+  "message0": 'Say: %1. and save response to %2',
   "args0": [
     {
       "type": "field_input",
