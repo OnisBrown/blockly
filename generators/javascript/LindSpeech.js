@@ -63,11 +63,11 @@ async function askResCode(prompt, simBool)
 {
   rwcActionSay(prompt).on("result", (status)=>{
        if(simBool){
-         var  tmp = prompt(prompt);
+         resolve(prompt(prompt));
        }
        else{
          rwcListenerGetDialogue().then(function(script){
-          var  tmp = script;
+          resolve(script);
          });
        }
   });

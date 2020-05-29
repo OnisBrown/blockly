@@ -20,7 +20,6 @@ var listCondXJSON ={
     {
       "type": "input_value",
       "name": "limit",
-      "check":["string","number"]
     }
   ],
   "inputsInline": true,
