@@ -43,6 +43,30 @@ async function askOCode(prompt, simBool)
   console.log(JSON.stringify(result));
 }
 
+Blockly.JavaScript['askResQuestion'] = function(block) {
+  //GoTo a location
+  var prompt = block.getFieldValue('prompt');
+  var varName = Blockly.JavaScript.variableDB_.getName(
+      block.getFieldValue('VAR'), Blockly.VARIABLE_CATEGORY_NAME);
+  var simBool = block.getFieldValue('simulator').toLowerCase();
+  var code = `${varName} = await askResCode(\`${prompt}\`, ${simBool});\n`;
+  return code;
+};
+
+async function askResCode(prompt, simBool)
+{
+  rwcActionSay(prompt).on("result", (status)=>{
+       if(simBool){
+         var  tmp = prompt(prompt);
+       }
+       else{
+         rwcListenerGetDialogue().then(function(script){
+          var  tmp = script;
+         });
+       }
+  });
+}
+
 Blockly.JavaScript['askYNQuestion'] = function(block) {
   var question = block.getFieldValue('question') || "failed to parse speech";
   var code = `await askYNQuestionCode(\`${question}\`);\n`;

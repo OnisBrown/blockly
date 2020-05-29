@@ -107,13 +107,18 @@ Blockly.Blocks['askYNQuestion'] = {
   }
 };
 
-var askStrQuestionJSON ={
+var askResQuestionJSON ={
   "message0": 'Say: %1. and return the response',
   "args0": [
     {
       "type": "field_input",
       "name": "prompt",
       "check":"string"
+    },
+    {
+      "type": "field_variable",
+      "name": "VAR",
+      "variable": "%{BKY_VARIABLES_DEFAULT_NAME}"
     }
   ],
   "message1": '(No working microphone? %1)',
@@ -128,7 +133,8 @@ var askStrQuestionJSON ={
   "nextStatement": null,
   "previousStatement": null,
   "style":"procedure_blocks",
-  "tooltip": "allows you to ask the robot to do something via spoken word or text input"
+  "tooltip": "allows you to ask the robot to do something via spoken word or text input",
+  "extensions": ["contextMenu_variableSetterGetter"]
 };
 
 Blockly.Blocks['askResQuestion'] = {
