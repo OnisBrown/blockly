@@ -61,16 +61,18 @@ Blockly.JavaScript['askResQuestion'] = function(block) {
 
 async function askResCode(prompt, simBool)
 {
-  rwcActionSay(prompt).on("result", (status)=>{
-       if(simBool){
-         resolve(prompt(prompt));
-       }
-       else{
-         rwcListenerGetDialogue().then(function(script){
-          resolve(script);
-         });
-       }
-  });
+  return new Promise( resolve => {
+    rwcActionSay(prompt).on("result", (status)=>{
+         if(simBool){
+           resolve(prompt(prompt));
+         }
+         else{
+           rwcListenerGetDialogue().then(function(script){
+            resolve(script);
+           });
+         }
+    });
+  }
 }
 
 Blockly.JavaScript['askYNQuestion'] = function(block) {
